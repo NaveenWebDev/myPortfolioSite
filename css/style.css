@@ -1,0 +1,789 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+*::selection {
+  background-color: #5E768C;
+  color: #fff;
+}
+header {
+  background: url(../images/back.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+/* ================utlityclasses================== */
+
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 25px;
+}
+h3 {
+  font-size: 20;
+}
+p {
+  font-size: 16px;
+}
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+/* ======================================================= */
+div.navbar {
+  height: 50px;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+}
+div.back {
+  background-color: #2c2c2c;
+}
+div.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.hamburger {
+  width: 27px;
+  height: 25px;
+  cursor: pointer;
+}
+.spans {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+div.hamburger .spans .class2 {
+  position: relative;
+  right: 5px;
+}
+.spans span {
+  border: 2px solid #fff;
+}
+span.hide {
+  display: none;
+}
+.spans span {
+  transform-origin: left;
+  transition: all 0.5s;
+}
+span.rotatePlus {
+  transform: rotate(50deg);
+}
+span.rotateMinus {
+  transform: rotate(-50deg);
+}
+.logo h2 {
+  color: #fff;
+  font-weight: 500;
+}
+div.posfixed {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  color: #ababab;
+  margin: 10px 20px;
+  width: 15px;
+  height: 100%;
+  top: 0;
+  justify-content: center;
+}
+div.posfixed i {
+  margin: 5px 0;
+}
+div.posfixed div.sil {
+  width: 10px;
+  border-left: 1px solid #ababab;
+  height: 100px;
+  margin: 0.3rem;
+}
+div.posfixed p {
+  transform-origin: left;
+  transform: rotate(-90deg);
+  display: inline-block;
+  width: 90px;
+  margin: 6rem 0.3rem;
+  font-size: 1.2rem;
+}
+/* =================================================================== */
+div.h1s h1 {
+  position: relative;
+  -webkit-text-stroke: 2px #ababab;
+  color: transparent;
+  font-family: sans-serif;
+}
+.itemLeft {
+  color: #ababab;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.itemLeft h1 {
+  margin: 5rem 0;
+  font-size: 70px;
+}
+.itemLeft .para {
+  display: flex;
+  align-items: center;
+}
+.itemLeft .para span {
+  border: 1px solid #505050;
+  width: 20px;
+  height: 1px;
+}
+.itemLeft .para p {
+  font-size: 2rem;
+}
+.itemLeft .boxes {
+  display: flex;
+  margin-top: 5rem;
+  /* flex-wrap: wrap; */
+}
+.itemLeft .boxes .box {
+  padding: 0 1.5rem;
+  border-left: 4px solid #5E768C;
+}
+.itemLeft .boxes .box p.white {
+  color: #fff;
+  margin: 10px 0;
+  padding-left: 10px;
+}
+
+.headerItems {
+  height: 90vh;
+  display: flex;
+}
+div.RightIcon {
+  width: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh;
+}
+div.RightIcon .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  position: relative;
+  bottom: 0px;
+}
+
+div.RightIcon .icon span {
+  height: 7px;
+  width: 7px;
+  display: block;
+  border-radius: 50%;
+  background-color: #fff;
+}
+div.RightIcon .icon div {
+  border: 1px dotted #ababab;
+  height: 70px;
+  width: 0;
+}
+div.RightIcon .icon i {
+  font-size: 25px;
+  animation-name: upside;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  position: absolute;
+  animation-direction: alternate;
+  top: 10px;
+}
+@keyframes upside {
+  0% {
+    padding-top: 40px;
+  }
+}
+
+/* =========================scroll bar design================================ */
+
+body::-webkit-scrollbar {
+  color: #5E768C;
+  width: 5px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #505050;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #5E768C;
+  border-radius: 10px;
+}
+/* =========================nav bar inner items desing=========================== */
+
+div.navitems {
+  color: #fff;
+  z-index: -4;
+  height: 100vh;
+  width: 0%;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  background-color: #2c2c2c;
+  transition: all 0.5s ease-in-out;
+}
+.navTools {
+  width: 50%;
+  height: 400px;
+  overflow: auto;
+}
+.navTools::-webkit-scrollbar {
+  width: 5px;
+}
+.navTools::-webkit-scrollbar-track {
+  background-color: #ababab;
+  border-radius: 10px;
+}
+.navTools::-webkit-scrollbar-thumb {
+  background-color: #5E768C;
+  border-radius: 10px;
+}
+.navTools::-webkit-scrollbar-track-piece {
+  display: none;
+}
+.navTools ul li a:link {
+  color: #ababab;
+  text-decoration: none;
+  font-size: 3rem;
+}
+.navTools ul li a:visited {
+  color: #ababab;
+}
+.navTools ul li {
+  list-style-type: none;
+  line-height: 60px;
+}
+
+.navitems .navsidebar {
+  padding: 5rem;
+  width: 50%;
+  text-align: right;
+  line-height: 50px;
+}
+.navitems .navsidebar h3 {
+  font-size: 2rem;
+}
+div.flexdiv {
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 80px;
+}
+div.slidefix {
+  width: 30%;
+  overflow: hidden;
+}
+
+/* ============================================about section designing=========================================== */
+
+.aboutSection {
+  background-color: #2c2c2c;
+  color: #ababab;
+  padding-top: 10rem;
+}
+.aboutContent {
+  display: flex;
+  margin-top: 10rem;
+  flex-wrap: wrap;
+}
+.aboutContent .image img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  box-shadow: 2px 2px 10px rgba(192, 192, 192, 0.192);
+}
+h1.abouth1 {
+  text-align: center;
+  font-size: 5rem;
+  color: #ababab;
+  border-bottom: 2px solid #5E768C;
+  width: fit-content;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+div.image {
+  width: 50%;
+  padding: 2em;
+  flex: 1 1 450px;
+}
+div.content {
+  width: 50%;
+  padding: 2em;
+  flex: 1 1 450px;
+}
+div.content h3 {
+  color: #fff;
+  font-size: 3rem;
+  margin: 1em 0;
+}
+div.content p.p {
+  line-height: 35px;
+  margin-bottom: 5rem;
+}
+div.lines .line {
+  margin: 3rem 0;
+}
+div.lines .line p.fp {
+  font-weight: 600;
+}
+div.lines .line p.percentage {
+  text-align: right;
+}
+div.lines .line div {
+  height: 5px;
+  width: 100%;
+  background-color: #505050;
+}
+div.lines .line1 div span {
+  height: 5px;
+  width: 80%;
+  background-color: #5E768C;
+  display: block;
+}
+div.lines .line2 div span {
+  height: 5px;
+  width: 90%;
+  background-color: #5E768C;
+  display: block;
+}
+div.lines .line3 div span {
+  height: 5px;
+  width: 70%;
+  background-color: #5E768C;
+  display: block;
+}
+div.lines button {
+  padding: 1em 2em;
+  background-color: #505050;
+  border: none;
+  color: #ababab;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 3rem;
+  color: #fff;
+}
+div.lines button:hover {
+  background-color: #2c2c2c;
+  box-shadow: 1px 1px 10px #c0c0c0c0;
+}
+
+/* ==========================service section designing===================== */
+
+section.services {
+  padding-top: 10rem;
+  background-color: #2c2c2c;
+}
+.serviceItems {
+  margin-top: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+.serviceItems .servbox {
+  border: 2px solid #505050;
+  padding: 2em;
+  margin: 1rem;
+  flex: 1 1 350px;
+}
+.serviceItems .servbox i {
+  color: #ababab;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+.serviceItems .servbox h3 {
+  color: #fff;
+  font-size: 2.5rem;
+}
+.serviceItems .servbox p {
+  line-height: 30px;
+  color: #ababab;
+}
+.servNum span {
+  color: #fff;
+  font-size: 3rem;
+  display: inline;
+}
+div.boxit {
+  width: 35%;
+  text-align: center;
+  background-color: #2c2c2c;
+  flex: 1 1 450px;
+}
+div.colorback {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #505050;
+  padding: 1em 0;
+}
+/* ---------------------------project sectioin designing -------------- */
+
+.projectSection {
+  background-color: #2c2c2c;
+  padding-top: 10rem;
+}
+
+div.prjectImages {
+  margin-top: 10rem;
+  border-bottom: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+div.prjectImages .img1 {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  flex: 1 1 450px;
+}
+div.prjectImages .img2 {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  flex: 1 1 450px;
+}
+div.prjectImages .img1 img {
+  width: 100%;
+  box-shadow: 1px 1px 10px #505050;
+}
+div.prjectImages .img2 img {
+  width: 100%;
+  box-shadow: 1px 1px 10px #505050;
+}
+div.prjectImagesTwo {
+  border-top: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1em 0;
+}
+div.prjectImagesTwo .img3 {
+  position: relative;
+  width: 30%;
+  flex: 1 1 350px;
+}
+div.prjectImagesTwo .img4 {
+  position: relative;
+  width: 30%;
+  flex: 1 1 350px;
+}
+div.prjectImagesTwo .img5 {
+  position: relative;
+  width: 30%;
+  flex: 1 1 350px;
+}
+div.prjectImagesTwo .img3 img {
+  width: 100%;
+  box-shadow: 1px 1px 10px #505050;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+div.prjectImagesTwo .img4 img {
+  width: 100%;
+  box-shadow: 1px 1px 10px #505050;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+div.prjectImagesTwo .img5 img {
+  width: 100%;
+  box-shadow: 1px 1px 10px #505050;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+div.show {
+  background-color: #5050509a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.imguniq {
+  padding: 2em;
+}
+div.imguniq:hover div.show {
+  width: 100%;
+  transition: all 0.2s ease-in;
+}
+div.show i {
+  background-color: #2c2c2c9a;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #fff;
+}
+div.fixedProbox {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(26, 26, 26);
+  position: fixed;
+  left: 0;
+  z-index: 51;
+  display: none;
+}
+div.fixedProboxs {
+  display: block;
+}
+div.fixedProbox span {
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+  position: absolute;
+  right: 10px;
+  z-index: 30;
+}
+div.fixedProbox div.imgbox {
+  max-width: 800px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+div.fixedProbox div.imgbox img {
+  width: 100%;
+  height: 90vh;
+}
+div.fixedProbox button.left {
+  border: none;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  color: #fff;
+  padding: 0.1em;
+  background-color: transparent;
+  z-index: 60;
+  cursor: pointer;
+}
+div.fixedProbox button.right {
+  z-index: 60;
+  background-color: transparent;
+  border: none;
+  font-size: 3rem;
+  position: absolute;
+  right: 0px;
+  color: #fff;
+  padding: 0.1em;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+/* ===============================form section ================================ */
+
+section.formSection {
+  background-color: #2c2c2c;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
+section.formSection form {
+  margin-top: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+section.formSection form .navsidebar {
+  border: 1px solid #505050;
+  width: 30%;
+  padding: 2em 0;
+  text-align: center;
+  margin: 2rem;
+  flex: 1 1 300px;
+}
+section.formSection form .navsidebar h3 {
+  color: #fff;
+  font-size: 2rem;
+  margin: 1em 0;
+}
+section.formSection form .navsidebar p {
+  color: #ababab;
+  margin-top: 1rem;
+}
+section.formSection form .inputs {
+  border: 1px solid #505050;
+  width: 60%;
+  padding: 2em;
+  flex: 1 1 450px;
+  margin: 2rem;
+}
+section.formSection form .inputs input {
+  background-color: #2c2c2c;
+  text-align: center;
+  border: 1px solid #505050;
+  padding: 1em;
+  color: #fff;
+  margin-bottom: 1rem;
+  flex: 1 1 450px;
+}
+section.formSection form .inputs input:focus {
+  border-color: none;
+  outline: 1px solid #5E768C;
+}
+section.formSection form .inputs textarea {
+  text-align: center;
+  color: #fff;
+  background-color: #2c2c2c;
+  width: 100%;
+  border-color: #505050;
+}
+section.formSection form .inputs textarea:focus {
+  outline: 1px solid #5E768C;
+}
+div.allInputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+section.formSection form .inputs button {
+  margin-top: 1rem;
+  background-color: #505050;
+  padding: 0.5em 5rem;
+  border: none;
+  transition: all 0.5s;
+  color: #fff;
+  font-size: 1.6rem;
+}
+section.formSection form .inputs button:hover {
+  background-color: #5E768C;
+}
+/* ========================footer================================ */
+
+footer {
+  background-color: #2c2c2c;
+  border-top: 2px solid #505050;
+  padding: 1.5em;
+  color: #ababab;
+  text-align: center;
+  font-size: 1.3rem;
+}
+/* ===================================swiper js======================================= */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 1.8rem;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 1em;
+  background-color: #2c2c2c;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.swiper-slide p{
+    color: #ababab;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+.swiper-slide h3{
+    margin: 2rem 0;
+    color: #fff;
+}
+div.items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+section.testimonial {
+  background-color: #2c2c2c;
+  padding-top: 5rem;
+}
+div.stars{
+    color: rgb(255, 166, 0);
+}
+div.swip{
+    margin-top: 10rem;
+}
+span.typed{
+    font-size: 7rem;
+}
+.swiper-pagination{
+  color: #5E768C;
+}
+/* ========================================================media queries=========================================
+ */
+ @media (max-width: 780px) {
+    html{
+        font-size: 58%;
+    }
+    div.posfixed{
+        display: none;
+    }
+  }
+
+  @media (max-width: 500px) {
+    html{
+        font-size: 50%;
+    }
+    div.navsidebar{
+        display: none;
+    }
+    div.boxes{
+        display: flex;
+        flex-direction: column;
+    }
+    div.slidefix{
+        width: 80%;
+    }
+    
+  }
+  .swiper-button-next:after, .swiper-button-prev:after{
+    color: #5E768C;
+  }
+  .swiper-pagination-clickable .swiper-pagination-bullet{
+    background-color: #5E768C;
+  }
