@@ -16,6 +16,8 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <script src="./js/logic.js" defer></script>
     <title>PortfolioWeb</title>
   </head>
@@ -25,9 +27,9 @@
       <nav>
         <div class="navbar">
           <div class="container">
-            <div class="flex">
+            <div class="d-flex w-100 justify-content-between align-items-center">
               <div class="logo">
-                <h2 id="h2"><span style="color: #5e768c">N</span>aveen</h2>
+                <h2 id="h2" class="fs-1"><span style="color: #5e768c">N</span>aveen</h2>
               </div>
 
               <div class="hamburger">
@@ -61,7 +63,7 @@
 
           <button class="left"><</button>
           <div class="imgbox">
-            <img src="./images/pro1.jpg" alt="img1" />
+            <img src="./images/pro1.jpg" alt="img1" loading="lazy" />
             <p></p>
           </div>
           <button class="right">></button>
@@ -146,6 +148,7 @@
             <img
               src="./images/back.jpg"
               alt="studychildren"
+              loading="lazy"
               style="object-fit: cover; object-position: center"
             />
           </div>
@@ -253,20 +256,13 @@
     <section class="projectSection">
       <h1 class="abouth1">Project</h1>
 
-      <div class="prjectImages container">
-        <div class="img1 imguniq">
-          <img src="./images/pro1.jpg" alt="img1" />
-          <a href="#p">
-              <div class="show"><i class="fa-solid fa-eye"></i></div>
-            </a>
-        </div>
-        <div class="img2 imguniq">
-          <img src="./images/pro2.jpg" alt="img2" />
-          <a href="#p">
-              <div class="show"><i class="fa-solid fa-eye"></i></div>
-            </a>
+      <div class="container">
+        <div class="row justify-content-between myProjects">
+        
         </div>
       </div>
+
+
     </section>
 
     <!-- ======================================testimonial-section==============================================  -->
@@ -280,7 +276,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="items"">
-                    <img src="./images/naveen.jpg" style="object-fit: cover; object-position: center;" alt="" />
+                    <img src="./images/naveen.jpg" loading="lazy" style="object-fit: cover; object-position: center;" alt="" />
                     <h3>Naveen Sharma</h3>
                   <p>
                     Naveen Sharma is a Software developer. He is working in the industry for the past 1.5 years, working of different real-world problems.
@@ -289,7 +285,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="items">
-                    <img src="./images/abhijeet.jpeg" alt="" />
+                    <img src="./images/abhijeet.jpeg" alt="" loading="lazy" />
                     <h3>Abhijeet Das</h3>
                   <p>
                     Abhijeet Dass is a Computer Science student at Greater Noida institute of technology. He is a Frontend Developer.
@@ -298,7 +294,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="items">
-                    <img src="./images/rahul.png" style="object-fit: cover; object-position: 100% " alt="" />
+                    <img src="./images/rahul.png" loading="lazy" style="object-fit: cover; object-position: 100% " alt="" />
                     <h3>Rahul Verma</h3>
                   <p>
                     Rahul Verma is a Computer Science Student at Greater Noida institute of technology. He is a Backend Developer. 
@@ -351,7 +347,7 @@
 
     <!-- ===========================footerSEction ==================== -->
     <footer>
-      <h3>© Copyrights Inaikas <span id="date">year</span>. All Rights Reserved.</h3>
+      <h3>© Copyrights Naveen Sharma <span id="date">year</span>. All Rights Reserved.</h3>
     </footer>
 
     <!-- =============================cdn links for counter up and jquery======================================== -->
@@ -376,5 +372,11 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- ================================================cdn link for swiper js========================== -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- =========================bootstrap ===================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
   </body>
 </html>
